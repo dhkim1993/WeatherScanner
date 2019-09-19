@@ -31,6 +31,9 @@ public class Criteria {
 		}
 		this.countPerPage = countPerPage;
 	}
+	public int getPageStart() {
+		return (this.page - 1) * countPerPage;
+	}
 	@Override
 	public String toString() {
 		return "Criteria [page=" + page + ", countPerPage=" + countPerPage + "]";

@@ -67,7 +67,6 @@
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-
 <style>
 .dropdown:hover>.dropdown-menu {
 	display: block;
@@ -131,7 +130,7 @@
 							<li class="nav-item dropdownBtn"><a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
 								추천여행지 <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li><a class="dropdown-item"
+									<%--<li><a class="dropdown-item"
 										href="<c:url value='/reLoca/recity?month=1'/>">1월</a></li>
 									<li><a class="dropdown-item"
 										href="<c:url value='/reLoca/recity?month=2'/>">2월</a></li>
@@ -146,7 +145,7 @@
 									<li><a class="dropdown-item"
 										href="<c:url value='/reLoca/recity?month=7'/>">7월</a></li>
 									<li><a class="dropdown-item"
-										href="<c:url value='/reLoca/recity?month=8'/>">8월</a></li>
+										href="<c:url value='/reLoca/recity?month=8'/>">8월</a></li>--%>
 									<li><a class="dropdown-item"
 										href="<c:url value='/reLoca/recity?month=9'/>">9월</a></li>
 									<li><a class="dropdown-item"
@@ -165,10 +164,10 @@
 							<li class="nav-item dropdownBtn">
 							<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">${login.memberId}<b class="caret"></b></a>
 							<ul class="dropdown-menu">
-									<li><a class="dropdown-item" href="../mypage/myModify">회원정보 수정</a></li>
-									<li><a class="dropdown-item" href="<c:url value='../mypage/myLike'/>">내가 찜한 게시물</a></li>
-									<li><a class="dropdown-item" href="<c:url value='../mypage/myWrite'/>">내가 쓴 게시물</a></li>
-									<li><a class="dropdown-item" href="<c:url value='../member/logout'/>">로그아웃 </a></li>
+								<li><a class="dropdown-item" href="<c:url value='/mypage/myModify'/>">회원정보 수정</a></li>
+								<li><a class="dropdown-item" href="<c:url value='/mypage/myLike'/>">내가 찜한 게시물</a></li>
+								<li><a class="dropdown-item" href="<c:url value='/mypage/myWrite'/>">내가 쓴 게시물</a></li>
+								<li><a class="dropdown-item" href="<c:url value='/member/logout'/>">로그아웃 </a></li>
 							</ul></li>
 						</c:if>
 

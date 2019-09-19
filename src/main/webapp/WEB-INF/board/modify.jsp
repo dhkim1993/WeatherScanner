@@ -35,8 +35,8 @@
 
     <style>
         .wrapper {
-            padding-left: 10%px;
-            padding-right: 10%px;
+            padding-left: 10%;
+            padding-right: 10%;
         }
         .navbar li a:hover {
             background-color: #555;
@@ -85,8 +85,8 @@
                 <form role="form" id="writeForm" method="post"
                       action="<c:url value='/board/modify?boardNo=${article.boardNo }'/>" enctype="multipart/form-data">
                     <div class="box box-primary">
-                        <div class="box-header with-border">
-                            <h3 class="box-title">추천글 수정</h3>
+                        <div class="box-header with-border" style="text-align: center;">
+                            <h3 class="box-title">게시글 수정</h3>
                         </div>
                         <div class="box-body">
                             <input type="hidden" name="boardNo" value="${article.boardNo}">
@@ -104,9 +104,8 @@
                             </div>
                             <div class="form-group Mocontent">
                                 <label for="content">내용</label>
-                                <textarea class="form-control" id="content" name="content"
-                                          rows="30" placeholder="내용을 입력해주세요"
-                                          style="resize: none;">${article.content}</textarea>
+                                <textarea class="form-control" id="content" name="content" placeholder="내용을 입력해주세요"
+                                          rows="20" style="resize: none;">${article.content}</textarea>
                             </div>
 
                             <div class="form-group">

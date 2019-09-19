@@ -25,16 +25,12 @@
 <style>
     @media (max-width: 400px) {
         select {
-            float: left;
             width: 100%;
         }
     }
-
     @media (max-width: 400px) {
         input {
-            float: left;
             width: 100%;
-            margin-right: 0px;
         }
     }
 
@@ -43,7 +39,6 @@
     }
 
     option {
-        width: 20%;
         color: #000000;
     }
 
@@ -53,17 +48,6 @@
 
     input {
         color: #0A0A2A;
-    }
-
-    select {
-        margin-top: 5px;
-    }
-
-    .navbar-expand-md {
-        width: 500px;
-        background-color: #81F7D8;
-        opacity: 0.9;
-
     }
 
 </style>
@@ -81,11 +65,12 @@
                 </h1>
                 <p style="font-family: naBrush; color:#ffffff">History Weather &nbsp;&bull;&nbsp; Currently Weather&nbsp;&bull;&nbsp; Future Weather</p>
 
-                <nav class="navbar navbar-expand-md bg-light navbar-light" style="width: 100%;background: none;">
+                <nav class="navbar navbar-expand-md bg-light navbar-light" style="background: none;">
                     <!-- WI 는 WeatherInfo -->
-                    <form action="/WI/result" method="get" style="width:75%;">
-                        <input type="date" name="date" id="dateSelect" style="border:1px; "/>
-                        <select name="city" style="margin-top:5px;" id="citySelect">
+                    <form class="form-inline" action="/WI/result"  method="get">
+                        <div class="form-group" style="text-align:center; width: 120%">
+                        <input type="date" class="form-control" name="date" id="dateSelect" style="margin-right: 2%; margin-bottom: 2px;"/>
+                        <select class="form-control" name="city" id="citySelect" style="margin-right: 2%; margin-bottom: 2px;">
                             <option selected disabled hidden>나라&도시</option>
                             <optgroup label="아시아">
                                 <option value="방콕">방콕</option>
@@ -97,17 +82,15 @@
                                 <option value="코타키나발루">코타키나발루</option>
                             </optgroup>
                         </select>
-                        <input id="searchBtn" type="submit" value="search" style="margin-top:5px;"/>
+                        <input class="form-control" id="searchBtn" type="submit" value="search"/>
+                        <div class="welcome-hero-serch-box"></div>
+                        </div>
                     </form>
                 </nav>
-                <div class="welcome-hero-serch-box"></div>
             </div>
 
             <nav>
                 <ul>
-                    <%--<li><a href="https://kauth.kakao.com/oauth/authorize?client_id=fd4f87b0a1c6e0be3ef4cd9b8a05b285&redirect_uri=http://localhost:8080/kakaoLogin&response_type=code">
-                        <img src="//mud-kage.kakao.com/14/dn/btqbjxsO6vP/KPiGpdnsubSq3a0PHEGUK1/o.jpg"></a>
-                    </li>--%>
                     <li><a href="#" class="icon brands fa-facebook" style="color:#ffffff"><span
                         class="label">Facebook</span></a>
                     </li>
